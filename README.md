@@ -10,4 +10,4 @@ Instalasi Dependensi
    pip install -r requirements.txt
 
    Menjalankan Dashboard
-   python -m streamlit run dashboard/dashboard.py
+   python -m streamlit run dashboard.py
