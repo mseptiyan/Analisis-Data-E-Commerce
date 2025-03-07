@@ -3,6 +3,7 @@ import kagglehub
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
+import os
 
 # Judul Dashboard
 st.title("Dashboard Analisis Data E-Commerce")
