@@ -70,7 +70,7 @@ category_counts = load_purchase_data()
 
 # Plot Pola Pembelian
 fig, ax = plt.subplots(figsize=(12, 5))
-sns.barplot(x=category_counts.index[:20], y=category_counts.values[:20], palette="viridis", ax=ax)
+sns.barplot(x=category_counts.index[:15], y=category_counts.values[:15], palette="viridis", ax=ax)
 ax.set_title("Kategori Produk Terlaris")
 ax.set_xlabel("Kategori Produk")
 ax.set_ylabel("Jumlah Pembelian")
