@@ -18,6 +18,9 @@ def load_data():
 
 orders, payments, order_items, products, rfm_table = load_data()
 
+# Pastikan tipe data datetime
+orders["order_purchase_timestamp"] = pd.to_datetime(orders["order_purchase_timestamp"])
+
 # Menambahkan fitur interaktif: Filter berdasarkan rentang tanggal
 st.sidebar.subheader("Filter Data")
 start_date = st.sidebar.date_input("Tanggal Mulai", orders["order_purchase_timestamp"].min())
