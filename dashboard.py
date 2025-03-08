@@ -70,14 +70,14 @@ category_counts = load_purchase_data()
 
 # Plot Pola Pembelian
 fig, ax = plt.subplots(figsize=(12, 5))
-sns.barplot(x=category_counts.index[:10], y=category_counts.values[:10], palette="viridis", ax=ax)
+sns.barplot(x=category_counts.index[:20], y=category_counts.values[:20], palette="viridis", ax=ax)
 ax.set_title("Kategori Produk Terlaris")
 ax.set_xlabel("Kategori Produk")
 ax.set_ylabel("Jumlah Pembelian")
 plt.xticks(rotation=45)
 st.pyplot(fig)
 
-# --- Tambahan: Metode Pembayaran yang Paling Sering Digunakan ---
+# ---  Metode Pembayaran yang Paling Sering Digunakan ---
 st.subheader("Metode Pembayaran yang Paling Sering Digunakan")
 
 @st.cache_data
