@@ -9,16 +9,14 @@ st.title("Dashboard Analisis Data E-Commerce")
 # --- Load Data dari URL Google Drive ---
 @st.cache_data
 def load_data():
-    orders = pd.read_csv("https://drive.google.com/uc?id=1uKH4pmvL6j4UVcHQyPgXTzolIX_lf0uU")
-    payments = pd.read_csv("https://drive.google.com/uc?id=1yC0hS4NkXNUPwc2e56qJc3tkiUYoo6eg")
-    order_items = pd.read_csv("https://drive.google.com/uc?id=1c7y0mHUDZOj4TRmS1mhXFuzEvKu9Xnac")
-    products = pd.read_csv("https://drive.google.com/uc?id=1TzRPJXaV5_lmAAIL614WmSKGc70JnHBS")
-    rfm_table = pd.read_csv("https://drive.google.com/uc?id=19gNK6J2L0c8NvkkqStDTqk9NGJV1tcla") 
-
+    orders = pd.read_csv("https://drive.google.com/uc?id=1LnrXg37tjuEA8tG_FFlvFuHipSw0lRXX")
+    payments = pd.read_csv("https://drive.google.com/uc?id=1gRwmApgnQo8FgD61AsZc1pUTY7CYzblN")
+    order_items = pd.read_csv("https://drive.google.com/uc?id=12ksgLbIxVr4-xmqPgWqOuhPoo-q7DeX7")
+    products = pd.read_csv("https://drive.google.com/uc?id=1ARnbIOAiKsdTUKLlwO4zvmlIuqHRNPUL")
+    rfm_table = pd.read_csv("https://drive.google.com/uc?id=1ysfBSYYZPaGpksnrDrVxEpVUbo7-Ak1e") 
     return orders, payments, order_items, products, rfm_table
 
 orders, payments, order_items, products, rfm_table = load_data()
-
 
 # Menambahkan fitur interaktif: Filter berdasarkan rentang tanggal
 st.sidebar.subheader("Filter Data")
@@ -126,4 +124,4 @@ st.markdown("""
 - Frequency: Mayoritas pelanggan hanya melakukan pembelian sekali atau dua kali, sedangkan pelanggan yang berbelanja lebih dari lima kali jumlahnya sangat sedikit. Hal ini menunjukkan perlunya program loyalitas, insentif untuk pembelian berulang, atau rekomendasi produk berbasis histori transaksi agar pelanggan lebih sering berbelanja.
 
 - Monetary: Sebagian besar pelanggan memiliki total nilai transaksi di bawah 2.000, dengan hanya sedikit pelanggan yang memiliki total belanja tinggi. Untuk meningkatkan nilai transaksi, strategi seperti bundling produk, upselling, atau diskon khusus bagi pelanggan dengan pembelian di atas ambang tertentu bisa diterapkan.
-""")
+""") 
